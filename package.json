@@ -4,11 +4,14 @@
   "description": "Backend API Agenda contatos Fiap",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "dev": "ts-node-dev src/index.ts --watch"
+    "start": "node dist/main.js",
+    "dev": "ts-node-dev src/main.ts --watch"
   },
   "keywords": [],
   "author": "",
+  "engines": {
+    "node": "16.x"
+  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

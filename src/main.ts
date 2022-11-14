@@ -29,6 +29,6 @@ app.get('/contacts', async (req, res) => {
     res.json(contacts);
 })
 
-app.listen(80, () => {
-    console.log('Aplicação online! 👌')
+app.listen(process.env.PORT || 5050, () => {
+    console.log(`Aplicação online! 👌 na porta ${process.env.PORT}`)
 })
