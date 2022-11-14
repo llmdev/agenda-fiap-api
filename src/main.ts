@@ -36,6 +36,6 @@ app.get('/contacts', async (req, res) => {
     res.json(contacts);
 })
 
-app.listen(process.env.PORT || 5050, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Aplicação online! 👌 na porta ${process.env.PORT}`)
 })
