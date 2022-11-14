@@ -20,6 +20,13 @@ app.use(cors({
     origin: '*'
 }));
 
+
+app.get('/', (req,res) => {
+    res.json({
+        foo: 'bar'
+    })
+})
+
 app.get('/contacts', async (req, res) => {
     const db = pgp()(cn);
     const contacts = await db.query('SELECT * FROM CONTATOS')
