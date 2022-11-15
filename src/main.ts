@@ -22,7 +22,7 @@ midlewares(app);
 app.get('/contacts', async (req, res) => {
     const db = pgp()(dbSettings);
     const contactsInstance = new Contato(db);
-    const contacts = contactsInstance.all()
+    const contacts = await contactsInstance.all()
     db.$pool.end;
     res.json(contacts);
 })
